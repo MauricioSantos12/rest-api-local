@@ -1,0 +1,54 @@
+{
+    "name": "rest-api-movies",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "nodemon": "^3.1.10",
+      "standard": "^17.1.2"
+    },
+    "eslintConfig": {
+      "extends": "standard",
+      "env": {
+        "node": true,
+        "es6": true
+      },
+      "parserOptions": {
+        "ecmaVersion": 2020
+      },
+      "rules": {
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "semi": [
+          "error",
+          "always"
+        ],
+        "quotes": [
+          "error",
+          "double"
+        ],
+        "comma-dangle": [
+          "error",
+          {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline"
+          }
+        ]
+      }
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^5.1.0",
+      "zod": "^3.24.3"
+    }
+  }
+  
