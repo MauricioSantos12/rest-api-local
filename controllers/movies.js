@@ -1,4 +1,7 @@
 const MovieModel = require("../models/movie");
+const { validatePartialMovie, validateMovie } = require("../schemas/movies");
+const { object } = require("zod");
+const crypto = require("crypto");
 
 const getAll = async (req, res) => {
   const { title, year, genre } = req.query;

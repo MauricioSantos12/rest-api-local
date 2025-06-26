@@ -1,15 +1,15 @@
-const crypto = require("crypto");
-const { validatePartialMovie, validateMovie } = require("../schemas/movies");
+require("dotenv").config();
 const mysql = require("mysql2/promise");
-const { object } = require("zod");
 
-const config = {
+const defaultConfig = {
   host: "localhost",
   user: "root",
   password: "",
   database: "moviesdb",
   port: 3306,
 };
+
+const config = process.env.uri_db ?? defaultConfig;
 
 const getAllMovies = async ({ genre, title, year }) => {
   let moviesToReturn = [];
