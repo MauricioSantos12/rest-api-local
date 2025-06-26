@@ -4,52 +4,80 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "dev": "nodemon app.js",
-      "start": "node app.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon app.js",
+        "start": "node app.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-      "nodemon": "^3.1.10",
-      "standard": "^17.1.2"
+        "nodemon": "^3.1.10",
+        "standard": "^17.1.2"
     },
     "eslintConfig": {
-      "extends": "standard",
-      "env": {
-        "node": true,
-        "es6": true
-      },
-      "parserOptions": {
-        "ecmaVersion": 2020
-      },
-      "rules": {
-        "no-unused-vars": "warn",
-        "no-console": "off",
-        "semi": [
-          "error",
-          "always"
-        ],
-        "quotes": [
-          "error",
-          "double"
-        ],
-        "comma-dangle": [
-          "error",
-          {
-            "arrays": "always-multiline",
-            "objects": "always-multiline",
-            "imports": "always-multiline",
-            "exports": "always-multiline"
-          }
-        ]
-      }
+        "extends": "standard",
+        "env": {
+            "node": true,
+            "es6": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 2020
+        },
+        "rules": {
+            "no-unused-vars": "warn",
+            "no-console": "off",
+            "semi": [
+                "error",
+                "always"
+            ],
+            "quotes": [
+                "error",
+                "double"
+            ],
+            "comma-dangle": [
+                "error",
+                {
+                    "arrays": "always-multiline",
+                    "objects": "always-multiline",
+                    "imports": "always-multiline",
+                    "exports": "always-multiline"
+                }
+            ],
+            "space-before-function-paren": [
+                "always"
+            ],
+            "indent": [
+                "error",
+                2,
+                {
+                    "SwitchCase": 1,
+                    "VariableDeclarator": 1,
+                    "outerIIFEBody": 1,
+                    "FunctionDeclaration": {
+                        "parameters": "first"
+                    },
+                    "FunctionExpression": {
+                        "parameters": "first"
+                    },
+                    "CallExpression": {
+                        "arguments": "first"
+                    },
+                    "ArrayExpression": 1,
+                    "ObjectExpression": 1
+                }
+            ],
+            "space-before-blocks": [
+                "error",
+                "always"
+            ]
+        }
     },
     "dependencies": {
-      "cors": "^2.8.5",
-      "express": "^5.1.0",
-      "zod": "^3.24.3"
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "mongodb": "^6.16.0",
+        "mysql2": "^3.14.1",
+        "zod": "^3.24.3"
     }
-  }
-  
+}

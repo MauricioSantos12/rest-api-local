@@ -3,7 +3,7 @@ const VALUES = ["Action", "Drama", "Comedy", "Horror", "Sci-Fi"];
 const movieScheme = z.object({
   title: z.string(),
   year: z.string(),
-  genre: z.array(z.enum(VALUES)),
+  genre: z.string(),
 });
 
 const validateMovie = (data) => {
